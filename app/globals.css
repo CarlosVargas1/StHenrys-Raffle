@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+:root {
+  /* Ground — warm ivory, echoing the parish site's own white/cream pages */
+  --ink: #faf7f1;
+  --charcoal: #f1ebe0;
+  --charcoal-raised: #e8e0d1;
+  --hairline: #ddd1bd;
+  --paper: #2b2420;
+  --mist: #6b6356;
+
+  /* Spurs raffle palette — the parish site's own slate blue, tuned for light backgrounds */
+  --spurs-blue: #4c6684;
+  --spurs-blue-dim: #35495f;
+  --spurs-silver: #5c6b7a;
+
+  /* Purses raffle palette — the parish site's terracotta rose, with a warm brass gold */
+  --purses-gold: #8a6a2e;
+  --purses-gold-light: #9c7733;
+  --purses-pink: #8c5650;
+
+  --font-display: var(--font-fraunces);
+  --font-body: var(--font-jakarta);
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-charcoal: var(--charcoal);
+  --color-charcoal-raised: var(--charcoal-raised);
+  --color-hairline: var(--hairline);
+  --color-paper: var(--paper);
+  --color-mist: var(--mist);
+
+  --color-spurs-blue: var(--spurs-blue);
+  --color-spurs-blue-dim: var(--spurs-blue-dim);
+  --color-spurs-silver: var(--spurs-silver);
+
+  --color-purses-gold: var(--purses-gold);
+  --color-purses-gold-light: var(--purses-gold-light);
+  --color-purses-pink: var(--purses-pink);
+
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+}
+
+body {
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--font-body);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.display-type {
+  font-family: var(--font-display);
+  font-optical-sizing: auto;
+  letter-spacing: -0.01em;
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-weight: 700;
+}
+
+/* Boutique placard frame corners */
+.placard-corner::before,
+.placard-corner::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-color: var(--purses-gold);
+}
+.placard-corner::before {
+  top: 10px;
+  left: 10px;
+  border-top: 1.5px solid;
+  border-left: 1.5px solid;
+}
+.placard-corner::after {
+  bottom: 10px;
+  right: 10px;
+  border-bottom: 1.5px solid;
+  border-right: 1.5px solid;
+}
+
+.focus-ring {
+  outline: none;
+}
+.focus-ring:focus-visible {
+  outline: 2px solid var(--paper);
+  outline-offset: 3px;
+}
