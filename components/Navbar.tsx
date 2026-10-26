@@ -5,8 +5,10 @@ import { Church, Menu, X } from "lucide-react";
 
 const LINKS = [
   { href: "#top", label: "Home" },
-  { href: "#spurs-raffle", label: "Spurs Raffle" },
+  { href: "#spurs-raffle", label: "Spurs Experience" },
+  { href: "#sports-raffle", label: "Sports Bundle" },
   { href: "#purses-raffle", label: "Designer Purses" },
+  { href: "#drawing", label: "Drawing" },
   { href: "#tickets", label: "Get Tickets" },
 ];
 
@@ -23,7 +25,7 @@ export default function Navbar() {
           </span>
         </a>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-6 lg:flex">
           {LINKS.map((link) => (
             <a
               key={link.href}
@@ -37,7 +39,7 @@ export default function Navbar() {
 
         <button
           type="button"
-          className="focus-ring -mr-2 flex h-10 w-10 items-center justify-center text-paper md:hidden"
+          className="focus-ring -mr-2 flex h-10 w-10 items-center justify-center text-paper lg:hidden"
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
@@ -47,7 +49,7 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <nav className="border-t border-hairline bg-ink px-5 py-4 md:hidden">
+        <nav className="border-t border-hairline bg-ink px-5 py-4 lg:hidden">
           <ul className="flex flex-col gap-1">
             {LINKS.map((link) => (
               <li key={link.href}>

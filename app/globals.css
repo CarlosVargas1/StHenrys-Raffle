@@ -14,6 +14,10 @@
   --spurs-blue-dim: #35495f;
   --spurs-silver: #5c6b7a;
 
+  /* Sports Bundle palette — a deep royal blue nodding to the Staubach jersey */
+  --sports-royal: #2d4f8e;
+  --sports-royal-dim: #223c6c;
+
   /* Purses raffle palette — the parish site's terracotta rose, with a warm brass gold */
   --purses-gold: #8a6a2e;
   --purses-gold-light: #9c7733;
@@ -34,6 +38,9 @@
   --color-spurs-blue: var(--spurs-blue);
   --color-spurs-blue-dim: var(--spurs-blue-dim);
   --color-spurs-silver: var(--spurs-silver);
+
+  --color-sports-royal: var(--sports-royal);
+  --color-sports-royal-dim: var(--sports-royal-dim);
 
   --color-purses-gold: var(--purses-gold);
   --color-purses-gold-light: var(--purses-gold-light);
@@ -64,6 +71,14 @@ body {
   font-family: var(--font-display);
   font-optical-sizing: auto;
   letter-spacing: -0.01em;
+}
+
+/* Hero headline face — Playfair, echoing the raffle flyers, with no fancy "ff" ligature */
+.hero-type {
+  font-family: var(--font-playfair);
+  font-weight: 600;
+  font-variant-ligatures: no-common-ligatures no-discretionary-ligatures;
+  letter-spacing: -0.005em;
 }
 
 .eyebrow {

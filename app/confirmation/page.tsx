@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { CheckCircle2, XCircle, ArrowLeft } from "lucide-react";
 import { getStripe } from "@/lib/stripe";
-import { RAFFLES, isRaffleId } from "@/lib/raffles";
+import { DRAWING, RAFFLES, isRaffleId } from "@/lib/raffles";
 
 export const metadata = {
   title: "Thank You | St. Henry's Teen Ministry Raffles",
@@ -63,8 +63,9 @@ export default async function ConfirmationPage({
           </dl>
 
           <p className="mt-6 text-xs text-mist">
-            A receipt has been sent to your email. We&apos;ll be in touch with winners after the
-            drawing — thank you for your generosity!
+            A receipt has been sent to your email. Winners will be drawn on {DRAWING.label},{" "}
+            {DRAWING.date} at {DRAWING.time}. You do not need to be in attendance to win &mdash;
+            we&apos;ll be in touch with winners after the drawing. Thank you for your generosity!
           </p>
         </div>
       ) : (

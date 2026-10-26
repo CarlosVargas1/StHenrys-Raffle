@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getStripe } from "@/lib/stripe";
-import { RAFFLES, isRaffleId } from "@/lib/raffles";
+import { RAFFLES, TICKETS_PER_RAFFLE, isRaffleId } from "@/lib/raffles";
 
 export async function POST(request: NextRequest) {
   let body: { raffle?: string; quantity?: number };
@@ -16,7 +16,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "Unknown raffle selected." }, { status: 400 });
   }
 
-  if (!Number.isInteger(quantity) || quantity! < 1 || quantity! > 200) {
+  if (!Number.isInteger(quantity) || quantity! < 1 || quantity! > TICKETS_PER_RAFFLE) {
     return NextResponse.json({ error: "Invalid ticket quantity." }, { status: 400 });
   }
 

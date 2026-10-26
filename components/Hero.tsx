@@ -38,8 +38,8 @@ export default function Hero() {
           St. Henry&apos;s Catholic Church &middot; Teen Ministry
         </p>
 
-        <h1 className="display-type mx-auto mt-5 max-w-3xl text-[2.4rem] leading-[1.15] sm:text-6xl md:text-[4.2rem]">
-          <span className="block">Two amazing raffles.</span>
+        <h1 className="hero-type mx-auto mt-5 max-w-3xl text-[2.4rem] leading-[1.15] sm:text-6xl md:text-[4.2rem]">
+          <span className="block">Three amazing raffles.</span>
           <span className="block italic text-purses-gold-light">One great cause.</span>
         </h1>
 
@@ -48,18 +48,30 @@ export default function Hero() {
           prizes!
         </p>
 
+        <p className="mx-auto mt-4 inline-flex flex-wrap items-center justify-center gap-x-2 rounded-full border border-purses-gold/40 bg-ink/70 px-5 py-2 text-sm font-semibold text-paper">
+          <span className="text-purses-gold">Drawing:</span> Christmas Eve, Dec. 24 at 7:30 PM
+          <span aria-hidden className="text-hairline">|</span>
+          <span className="text-mist">No need to be present to win</span>
+        </p>
+
         <div className="mx-auto mt-8 flex max-w-md flex-col gap-3 sm:max-w-none sm:flex-row sm:justify-center">
           <a
             href="#spurs-raffle"
             className="focus-ring inline-flex items-center justify-center rounded-full bg-spurs-blue px-7 py-4 text-sm font-semibold tracking-wide text-ink transition-transform active:scale-[0.98] sm:text-base"
           >
-            Explore Spurs Raffle
+            Spurs Experience
+          </a>
+          <a
+            href="#sports-raffle"
+            className="focus-ring inline-flex items-center justify-center rounded-full bg-sports-royal px-7 py-4 text-sm font-semibold tracking-wide text-ink transition-transform active:scale-[0.98] sm:text-base"
+          >
+            Sports Bundle
           </a>
           <a
             href="#purses-raffle"
             className="focus-ring inline-flex items-center justify-center rounded-full border border-purses-gold px-7 py-4 text-sm font-semibold tracking-wide text-purses-gold-light transition-transform active:scale-[0.98] sm:text-base"
           >
-            Explore Designer Purses
+            Designer Purses
           </a>
         </div>
       </div>

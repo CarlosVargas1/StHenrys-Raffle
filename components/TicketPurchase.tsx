@@ -2,9 +2,9 @@
 
 import { useState } from "react";
 import { Minus, Plus, Loader2 } from "lucide-react";
-import type { RaffleId } from "@/lib/raffles";
+import { TICKETS_PER_RAFFLE, type RaffleId } from "@/lib/raffles";
 
-const MAX_QTY = 200;
+const MAX_QTY = TICKETS_PER_RAFFLE;
 
 const THEME = {
   spurs: {
@@ -12,6 +12,12 @@ const THEME = {
     ring: "focus-visible:outline-spurs-blue",
     border: "border-spurs-blue-dim",
     accentText: "text-spurs-blue",
+  },
+  sports: {
+    button: "bg-sports-royal text-ink",
+    ring: "focus-visible:outline-sports-royal",
+    border: "border-sports-royal-dim/50",
+    accentText: "text-sports-royal",
   },
   purses: {
     button: "bg-gradient-to-r from-purses-gold to-purses-pink text-ink",
@@ -128,7 +134,9 @@ export default function TicketPurchase({
       </button>
 
       <p className="mt-3 text-center text-xs text-mist">
-        Secure checkout powered by Stripe. 200 tickets available per raffle.
+        Secure checkout powered by Stripe. Only {TICKETS_PER_RAFFLE} tickets sold for this raffle.
+        <br />
+        You do not need to be present to win.
       </p>
     </div>
   );
