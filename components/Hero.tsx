@@ -48,6 +48,10 @@ export default function Hero() {
           prizes!
         </p>
 
+        <p className="mx-auto mt-3 max-w-xl text-sm font-semibold text-paper sm:text-base">
+          Raising funds for our Retreats, Class Materials, and Class Functions
+        </p>
+
         <p className="mx-auto mt-4 inline-flex flex-wrap items-center justify-center gap-x-2 rounded-full border border-purses-gold/40 bg-ink/70 px-5 py-2 text-sm font-semibold text-paper">
           <span className="text-purses-gold">Drawing:</span> Christmas Eve, Dec. 24 at 7:30 PM
           <span aria-hidden className="text-hairline">|</span>

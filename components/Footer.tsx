@@ -7,6 +7,9 @@ export default function Footer() {
         <Church className="h-5 w-5 text-purses-gold" strokeWidth={1.5} />
         <p className="font-semibold text-paper">St. Henry&apos;s Catholic Church</p>
         <p className="text-sm text-mist">Teen Ministry</p>
+        <p className="text-sm text-mist">
+          Raising funds for our Retreats, Class Materials, and Class Functions
+        </p>
         <a
           href="https://www.sthenrysatx.org/"
           target="_blank"
